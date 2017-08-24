@@ -3,4 +3,5 @@
 *.cache
 !.gitignore
 !/src
+!composer.json
 
