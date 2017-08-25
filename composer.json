@@ -16,7 +16,7 @@
 
 	"autoload": {
 		"psr-4": {
-			"knowbox\\libs\\": "src/"
+			"knowbox\\": "src/knowbox/"
 		}
 	}
 }

@@ -18,8 +18,7 @@ class RedisManager
 
     public function __construct()
     {
-        require_once "../config/Init.php";
-        $this->_redisConfs = require_once ROOT_PATH."/config/RedisConfig.php";
+        $this->_redisConfs = require_once dirname(__DIR__)."/config/RedisConfig.php";
         $this->_redisConfs = $this->getRedisInstanceConf($this->_redisConfs);
     }
 
