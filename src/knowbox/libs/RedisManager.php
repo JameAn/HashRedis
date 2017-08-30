@@ -88,10 +88,10 @@ class RedisManager
                return $this->getRedis($cachekey)->$funName($cachekey, array_shift($args));
                break;
             case 2:
-                return $this->getRedis($cachekey)->$funName($cachekey, array_shift($$args), array_shift($args));
+                return $this->getRedis($cachekey)->$funName($cachekey, array_shift($args), array_shift($args));
                 break;
             case 3:
-                return $this->getRedis($cachekey)->$funName($cachekey, array_shift($$args), array_shift($args), array_shift($args));
+                return $this->getRedis($cachekey)->$funName($cachekey, array_shift($args), array_shift($args), array_shift($args));
                 break;
             default:
                 throw new \Exception("未定义参数");
