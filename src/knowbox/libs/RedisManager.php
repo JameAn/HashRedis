@@ -97,4 +97,11 @@ class RedisManager
                 throw new \Exception("未定义参数");
         }
     }
+
+    public function __destruct()
+    {
+        return array_walk($this->_regRedis, function ($redis, $key) {
+            $redis->close();
+        });
+    }
 }
