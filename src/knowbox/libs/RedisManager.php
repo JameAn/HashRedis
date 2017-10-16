@@ -10,11 +10,11 @@ class RedisManager
 {
     private $_redis = [];
     #redis配置
-    private $_redisConfs = [];
+    protected $_redisConfs = [];
     #已经注册的redis实例数组
-    private $_regRedis = [];
+    protected $_regRedis = [];
 
-    private static $instance;
+    protected static $instance;
 
     public function __construct()
     {
@@ -45,7 +45,7 @@ class RedisManager
         return $redisConf['instance'];
     }
 
-    private function connect($conf)
+    protected function connect($conf)
     {
         $mapKey = md5(implode(":", $conf));
         if (array_key_exists($mapKey, $this->_regRedis)) {
