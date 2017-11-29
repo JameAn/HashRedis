@@ -33,7 +33,7 @@ class RedisManager
     /**
      *  将redisconf中的默认配置与实例配置整合
      */
-    private function getRedisInstanceConf($redisConf)
+    protected function getRedisInstanceConf($redisConf)
     {
         if (empty($redisConf['instance'])) {
             return $redisConf['default'];
